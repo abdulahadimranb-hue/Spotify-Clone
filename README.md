@@ -6,8 +6,6 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-<!-- Optional: replace # with your deployed URL, or delete this line -->
-🔗 **Live Demo:** [View it here](#)
 
 ---
 
@@ -172,4 +170,3 @@ file for details.
 
 ---
 
-<p align="center">Built with ❤️ by <strong>[Your Name]</strong></p>
