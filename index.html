@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="left">
+            <img class="logo" src="logo.svg" alt="logo">
+
+            <div class="home">
+                <img src="home.svg" alt="home">
+            </div>
+
+            <div class="search">
+                <span>⌕</span>
+                <input type="text" placeholder="Write song name">
+            </div>
+        </div>
+
+        <div class="right">
+            <button class="install">⇩ Install App</button>
+            <div class="divider"></div>
+            <button class="signup">Sign up</button>
+            <button class="login">Login</button>
+        </div>
+    </nav>
+
+    <div class="main">
+
+        <button class="sidebar-toggle" type="button" aria-label="Open library" aria-controls="library-panel"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <aside class="leftmain" id="library-panel">
+            <div class="library-head">
+                <h2>Your Library</h2>
+                <button class="add">+</button>
+            </div>
+            <div class="playlistsec"></div>
+
+            <footer>
+                <div class="links">
+                    <a href="#">Legal</a>
+                    <a href="#">Safety & Privacy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">About Ads</a>
+                    <a href="#">Accessibility</a>
+                </div>
+
+                <button class="language">🌐 English</button>
+            </footer>
+        </aside>
+
+        <main class="rightmain">
+
+            <div class="head">
+                <h2>Trending Songs</h2>
+                <p>Choose a playlist or search for a song.</p>
+            </div>
+
+            <section class="songcards">
+
+                <div class="songcard">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02a5f7818cd1951c5742e8277a" alt="Song">
+                    <h3>Tera Mera Rishta - New Version</h3>
+                    <p>Pritam</p>
+                </div>
+
+                <div class="songcard">
+                    <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616d0000e1a3a0b110307ee3dc10a74e3562" data-image-status="loaded" alt="" class="FwkSRC8nZx0oFeY2HJi2 P1gonXxOQOMxY_VaRdej heEXKegQt6YQnXXhq6dH xMLEqLC2MvHjIHuD0xxf" srcset="https://i.scdn.co/image/ab67616d0000e1a3a0b110307ee3dc10a74e3562 150w, https://i.scdn.co/image/ab67616d0000e1a3a0b110307ee3dc10a74e3562 300w, https://i.scdn.co/image/ab67616d0000aa54a0b110307ee3dc10a74e3562 320w, https://i.scdn.co/image/ab67616d0000aa54a0b110307ee3dc10a74e3562 640w" sizes="(min-width: 1280px) 232px, 192px">
+                    <h3>Barsat</h3>
+                    <p>Banjare,Roni</p>
+                </div>
+
+                <div class="songcard">
+                    <img aria-hidden="false" draggable="false" loading="lazy"
+                        src="https://i.scdn.co/image/ab67616d0000e1a324930273efd115ab0ecf88f7"
+                        data-image-status="loaded" alt=""
+                        class="FwkSRC8nZx0oFeY2HJi2 P1gonXxOQOMxY_VaRdej heEXKegQt6YQnXXhq6dH xMLEqLC2MvHjIHuD0xxf"
+                        srcset="https://i.scdn.co/image/ab67616d0000e1a324930273efd115ab0ecf88f7 150w, https://i.scdn.co/image/ab67616d0000e1a324930273efd115ab0ecf88f7 300w, https://i.scdn.co/image/ab67616d0000aa5424930273efd115ab0ecf88f7 320w, https://i.scdn.co/image/ab67616d0000aa5424930273efd115ab0ecf88f7 640w"
+                        sizes="(min-width: 1280px) 232px, 192px">
+                    <h3>God Knows</h3>
+                    <p>Jokhai,Umair</p>
+                </div>
+                <div class="songcard">
+                    <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67616d0000e1a38f2706d41aa1ec24c04135ba" data-image-status="loaded" alt="" class="FwkSRC8nZx0oFeY2HJi2 P1gonXxOQOMxY_VaRdej heEXKegQt6YQnXXhq6dH xMLEqLC2MvHjIHuD0xxf" srcset="https://i.scdn.co/image/ab67616d0000e1a38f2706d41aa1ec24c04135ba 150w, https://i.scdn.co/image/ab67616d0000e1a38f2706d41aa1ec24c04135ba 300w, https://i.scdn.co/image/ab67616d0000aa548f2706d41aa1ec24c04135ba 320w, https://i.scdn.co/image/ab67616d0000aa548f2706d41aa1ec24c04135ba 640w" sizes="(min-width: 1280px) 232px, 192px">
+                    <h3>Awarapan</h3>
+                    <p>Pritam</p>
+                </div>
+
+
+    </div>
+    </section>
+
+    <div class="player-bar">
+
+        <div class="player-icon">
+            <img class="player-song-icon invert" src="musicicon.svg" alt="Now playing">
+            <div class="song-info">
+                <p class="song-name">Blinding Lights</p>
+                <p class="artist-name">The Weeknd</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="icons">
+                <button class="btn">⏮</button>
+                <button class="btn">⏸</button>
+                <button class="btn">⏭</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="time">0:00</div>
+                <div class="progress"></div>
+                <div class="progress-handle"></div>
+            </div>
+        </div>
+        <div class="duration">0:00/0:00</div>
+
+    </div>
+
+    </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
