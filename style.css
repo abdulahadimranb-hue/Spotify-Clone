@@ -413,7 +413,6 @@ padding: 6px;
     text-shadow: 1px 1px 2px #a19e9e;   
 }
 
-/* Off-canvas library layout below 1500px. */
 .sidebar-toggle {
     display: none;
 }
@@ -487,7 +486,6 @@ padding: 6px;
     }
 }
 
-/* Keep player controls and duration aligned as the responsive layout narrows. */
 @media (max-width: 1500px) {
     .player-bar {
         grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -539,7 +537,6 @@ padding: 6px;
     }
 }
 
-/* Tablet and phone layout: prevent overflow and show two scrollable song cards per row. */
 @media (max-width: 1000px) {
     html,
     body {
@@ -611,7 +608,6 @@ padding: 6px;
     }
 }
 
-/* Compact controls and library content for narrow phones. */
 @media (max-width: 600px) {
      
     .songcards {
@@ -718,7 +714,6 @@ padding: 6px;
     }
 }
 
-/* A tighter player bar at tablet widths, while preserving the left / centre / right layout. */
 @media (max-width: 1000px) {
     .player-bar {
         height: 60px;
@@ -798,7 +793,6 @@ padding: 6px;
     }
 }
 
-/* Keep song details visible and move the elapsed time beside the seek bar. */
 @media (max-width: 1000px) {
     .progress-bar {
         width: clamp(145px, 32vw, 360px);
@@ -856,7 +850,6 @@ padding: 6px;
     }
 }
 
-/* Keep every player element visible on phones with compact, even spacing. */
 @media (max-width: 600px) {
     .player-bar {
         right: 10px;
@@ -963,7 +956,6 @@ padding: 6px;
     }
 }
 
-/* Selected library playlist feedback. */
 .playlist.active {
     border-color: #1db954;
     background-color: #252525;
@@ -973,7 +965,6 @@ padding: 6px;
     cursor: pointer;
 }
 
-/* Playlist cards are selected on the right; their songs appear in the library. */
 .playlist-card.active {
     outline: 2px solid #1db954;
     background: #252525;

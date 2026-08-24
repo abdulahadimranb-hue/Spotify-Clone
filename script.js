@@ -8,9 +8,9 @@ let durationLabel = document.querySelector(".duration");
 
 let currentPercent = 0;
 let playInterval = null;
-const SONG_DURATION_SECONDS = 20; // fake duration, adjust as you like
+const SONG_DURATION_SECONDS = 20; 
 
-playPauseBtn.textContent = "▶"; // show play icon on initial page load
+playPauseBtn.textContent = "▶"; 
 
 function formatTime(seconds) {
     let mins = Math.floor(seconds / 60);
@@ -22,7 +22,6 @@ function setProgress(percent, isDragging = false) {
     percent = Math.max(0, Math.min(100, percent));
     currentPercent = percent;
     
-    // Disable transition during dragging for instant response
     if (isDragging) {
         progress.style.transition = 'none';
         handle.style.transition = 'none';
@@ -69,7 +68,7 @@ function playSong(songName, artistName) {
 
 function startInterval() {
     clearInterval(playInterval);
-    let stepPercent = 100 / (SONG_DURATION_SECONDS * 10); // updates every 100ms
+    let stepPercent = 100 / (SONG_DURATION_SECONDS * 10); 
 
     playInterval = setInterval(() => {
         if (currentPercent >= 100) {
@@ -153,7 +152,6 @@ function renderLibrarySongs(playlist) {
         const song = playlist.songs[index];
         const playSelectedSong = () => {
             playSong(song.name, song.artist);
-            // Start playing when clicking on individual song
             isPlaying = true;
             playPauseBtn.textContent = "⏸";
             startInterval();
@@ -190,11 +188,9 @@ function showPlaylistSongs(playlist, index, autoPlay = true) {
         card.classList.toggle("active", cardIndex === index);
     });
     
-    // Auto-play the first song in the playlist only when clicking on a playlist
     if (autoPlay && playlist.songs.length > 0) {
         const firstSong = playlist.songs[0];
         playSong(firstSong.name, firstSong.artist);
-        // Automatically start playing
         isPlaying = true;
         playPauseBtn.textContent = "⏸";
         startInterval();
@@ -206,19 +202,16 @@ sectionDescription.textContent = "Choose a playlist to see its songs in Your Lib
 renderPlaylistCards();
 showPlaylistSongs(musicPlaylists[0], 0, false);
 
-// click anywhere on the progress bar to jump there
 progressBar.addEventListener("click", (e) => {
     let rect = progressBar.getBoundingClientRect();
     let percent = ((e.clientX - rect.left) / rect.width) * 100;
     setProgress(percent, true);
-    // Re-enable transition after click
     setTimeout(() => {
         progress.style.transition = 'width 0.1s cubic-bezier(0.4, 0, 0.2, 1)';
         handle.style.transition = 'left 0.1s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease, opacity 0.2s ease';
     }, 50);
 });
 
-// drag the circle itself
 let isDragging = false;
 
 handle.addEventListener("mousedown", (e) => {
@@ -236,12 +229,10 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener("mouseup", () => {
     if (isDragging) {
         isDragging = false;
-        // Re-enable transition after dragging stops
         progress.style.transition = 'width 0.1s cubic-bezier(0.4, 0, 0.2, 1)';
         handle.style.transition = 'left 0.1s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease, opacity 0.2s ease';
     }
 });
-// Show or hide the library only while it is an off-canvas panel.
 const sidebarToggle = document.querySelector(".sidebar-toggle");
 const libraryPanel = document.querySelector(".leftmain");
 const mobileLayout = window.matchMedia("(max-width: 1500px)");
